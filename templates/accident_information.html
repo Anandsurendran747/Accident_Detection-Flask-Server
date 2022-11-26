@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th width="91" scope="row">NAME</th>
+      <td width="83">DATE TIME </td>
+      <td width="8">&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <th scope="row"><label>
+      {{i[0]}}&nbsp;{{i[1]}}
+      </label></th>
+      <td><label>
+  {{i[4]}}
+      </label></td>
+      <td><a href="https://www.google.com/maps?q={{i[5]}},{{i[6]}}">VIEW</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+</html>

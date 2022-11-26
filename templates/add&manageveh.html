@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1">
+    <tr>
+      <th scope="row">vehicle No </th>
+      <td>driver Name </td>
+      <td>phn No </td>
+      <td>driver Address </td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <th scope="row">{{i[1]}}</th>
+      <td>{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td><p><a href="edit_vehicle?id={{i[0]}}">edit</a></p>
+      <p><a href="deleteVehicle?id={{i[0]}}">delete</a></p></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+</html>

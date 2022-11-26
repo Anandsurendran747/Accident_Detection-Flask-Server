@@ -1,0 +1,42 @@
+<form action="" method="get"><form action="" method="get"></form></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="get">
+
+<table width="200" border="1">
+  <tr>
+    <th scope="row">NAME</th>
+    <td>PLACE</td>
+    <td>DISCRIPTION</td>
+    <td>CONTACT NUMBER </td>
+    <td>&nbsp;</td>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <th scope="row"><label>
+        {{i[1]}}
+    </label></th>
+    <td><label>
+      {{i[2]}}
+    </label></td>
+    <td><label>
+      {{i[3]}}
+    </label></td>
+    <td><label>
+      {{i[4]}}
+    </label></td>
+    <td><p><a href="https://www.google.com/maps?q={{i[5]}},{{i[6]}}">VIEW</a></p>
+      <p><a href="/edit_hospital?id={{i[0]}}">EDIT</a></p>
+      <p><a href="/deleteHospital?id={{i[0]}}">DELETE</a></p></td>
+  </tr>
+  {% endfor %}
+</table>
+
+</form>
+<a href="add_hospital"  type="submit">Add New</a>
+</body>
+</html>
